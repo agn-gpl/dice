@@ -1,5 +1,4 @@
 # dice
-python3 tools to help you get random numbers for board game
 
 usage:
 
