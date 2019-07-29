@@ -42,11 +42,11 @@ def choose(m,n,z=False):
             out+=f'{idx[i]}\n'
     return out
 
-def get_sum(n,s,z=False,r=1):
+def get_sum(n,s,r=1,z=False):
     out=""
-    for j in range(r):
+    for i in range(r):
         temp=0
-        for i in range(n):
+        for j in range(n):
             temp+=rd.randint(1,s)
         if z:
             out+=f"{temp}, "
@@ -77,7 +77,7 @@ def main():
             print(get_sum(int(tok[0]),int(tok[1]),z),end="")
         elif npt.count("s")==2:
             tok=npt.lstrip("z").rstrip("z").split("s")
-            print(get_sum(int(tok[0]),int(tok[1]),z,int(tok[2])),end="")
+            print(get_sum(int(tok[0]),int(tok[1]),int(tok[2]),z),end="")
         elif npt=="h" or npt=="help":
             print_help()
         elif npt=="q" or npt=="quit":
